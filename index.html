@@ -1,0 +1,24 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./aframe.min.js"></script>
+    <script src="./mindar-image-aframe.prod.js"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="countContainer"></div>
+    <div id="snow" data-count="200"></div>
+    <a-scene id="modelContainer" mindar-image="uiError:no; uiLoading:no; uiScanning:no" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="avatarModel" src="./christmas_tree.glb"></a-asset-item>
+      </a-assets>
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity rotation="0 0 0" >
+        <a-gltf-model rotation="0 0 0" position="0 -1 -15" scale="0 0 0" src="#avatarModel" animation="property: scale; to: 0.1 0.1 0.1; dur: 4000;">
+        </a-gltf-model>
+      </a-entity>
+    </a-scene>
+    <script src="./index.js"></script>
+  </body>
+</html>
